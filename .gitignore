@@ -1,0 +1,9 @@
+.DS_Store
+
+.config/fish/*
+!.config/fish/config.fish
+
+.config/configstore/
+.config/karabiner/automatic_backups
+
+wallpaper*
