@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# install system utils
+su root -c 'apt install bash curl git sudo && exit'
+sudo apt update && sudo apt upgrade
+sudo apt install i3
+
+# install flathub::org.mozilla.firefox
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.mozilla.firefox
+
+# install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+sudo apt install build-essential git cmake
+
+# install brew packages
+brew install fish fzf stow zellij
+
+# install font
+# install graphics-driver
+# audio utils
+
+# install language toolchains
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl -fsSL https://install.julialang.org | sh
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh" && bash Miniforge3-$(uname)-$(uname -m).sh
+
