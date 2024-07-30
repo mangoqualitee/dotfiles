@@ -1,7 +1,3 @@
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# brew install fish fzf neovim
-# install: llvm, miniforge3, rust, julia, haskell
-
 set fish_greeting
 fish_vi_key_bindings
 
@@ -13,7 +9,7 @@ if status is-interactive
     test -x (command -v brew) || echo "brew not on path"
 
     # Load lang-toolchains
-    test -f "$HOME/.cargo/env.fish" && source "$HOME/.cargo/env.fish"; or echo ".cargo not on path"
+    test -d "$HOME/.cargo/bin" && set -x PATH "$HOME/.cargo/bin" $PATH; or echo ".cargo not on path"
     test -d "$HOME/.juliaup/bin" && set -gx PATH "$HOME/.juliaup/bin" $PATH; or echo ".juliaup not on path"
     test -d "$HOME/.miniforge3/bin" && $HOME/.miniforge3/bin/conda "shell.fish" hook | source; or echo ".miniforge not on path"
 
@@ -23,8 +19,9 @@ if status is-interactive
 
     # Exports and Aliases
     set -gx PATH "$HOME/.local/bin" $PATH
-    set -gx EDITOR hx
-    set -gx LANG en_IN.UTF8
+    set -gx EDITOR /home/linuxbrew/.linuxbrew/bin/hx && abbr hx \$EDITOR
+    # set -gx LANG en_IN.UTF8
+    set -gx LESSHISTFILE -
 
     #alias jupyterlisten 'ssh -NL localhost:1234:localhost:8888 fbd'
 end
