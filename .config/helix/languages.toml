@@ -1,7 +1,6 @@
 [language-server]
 clangd = { command = "clangd", args = [ "--clang-tidy" ] }
 
-
 [[language]]
 name = "c"
 auto-format = true

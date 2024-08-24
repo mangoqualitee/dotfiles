@@ -3,4 +3,4 @@ Diagnostics:
     Add: [modernize*, readability*]
 
 CompileFlags:
-  Add: [-std=c++14, -Wall, -Wextra, -Wshadow]
+  Add: [-Wall, -Wextra, -Wshadow]
