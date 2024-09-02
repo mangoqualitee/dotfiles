@@ -2,24 +2,16 @@ theme = "gruber-darker"
 
 [editor]
 line-number = "relative"
-mouse = false
-
-[editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "underline"
 
 [editor.file-picker]
 hidden = false
 
 [editor.statusline]
-left = ["mode", "spinner"]
-center = ["file-name"]
+left = ["mode", "spinner", "file-name"]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
-separator = "│"
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
 
 [editor.lsp]
 display-inlay-hints = false
+
+[keys.normal]
+Z = { Q = ":quit!", Z = ":x" }
