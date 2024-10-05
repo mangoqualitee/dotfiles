@@ -11,6 +11,8 @@ if status is-interactive
     test -x (command -v trash) && abbr rm trash
     # Exports and Aliases
     set -gx PATH $HOME/.local/bin $PATH
+    set -gx PATH /opt/cuda/bin $PATH
+    set -gx LD_LIBRARY_PATH /opt/cuda/lib64/ $LD_LIBRARY_PATH
     set -gx EDITOR /usr/bin/helix && abbr hx '$EDITOR'
     set -gx LESSHISTFILE -
     # Move prompt bottom

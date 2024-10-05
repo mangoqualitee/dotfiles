@@ -17,5 +17,4 @@ formatter = { command = "rustfmt" }
 
 [[language]]
 name = "julia"
-auto-format = true
-# formatter
+# formatter = { command = "julia", timeout = 60, args = [ "-e", "using JuliaFormatter; println(\"Hello\", length(ARGS)); format(ARGS[1]);", ] }
