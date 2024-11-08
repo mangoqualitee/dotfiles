@@ -1,0 +1,30 @@
+pacstrap -K /mnt base base-devel linux linux-firmware sof-firware grub efibootmgr helix networkmanager fish
+
+useradd -m -G wheel -s /bin/fish
+
+mkdir -p .config/fish .ssh/ .local/bin Repos Downloads/images/wallpapers/
+
+# packages
+ttf-jetbrains-mono-nerd
+jq  # use: for .local/bin/argp
+sway swaylock swaybg wmenu i3status-rust xdg-desktop-portal-wlr 
+git
+stow
+firefox
+alacritty
+trash-cli
+discord
+steam
+steam
+nvidia-open
+xorg-server-xwayland
+btop
+bluez\nbluez-utils
+obs-studio qt6-wayland xdg-desktop-portal
+
+clang cmake llvm llvm-libs
+
+# aur-packages
+spotify  # corresponding pacman  	zenity      ffmpeg4.4    spotblock-rs
+premid   # corresponding extension  
+
