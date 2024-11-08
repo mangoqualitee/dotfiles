@@ -8,7 +8,7 @@ mkdir -p .config/fish .ssh/ .local/bin Repos Downloads/images/wallpapers/
 ttf-jetbrains-mono-nerd
 jq  # use: for .local/bin/argp
 sway swaylock swaybg wmenu i3status-rust xdg-desktop-portal-wlr 
-git
+git openssh
 stow
 firefox
 alacritty
