@@ -1,17 +1,33 @@
-theme = "gruber-darker"
+theme = "gruvbox_dark_hard"
+#theme = "gruber-darker"
 
 [editor]
+mouse = false
 line-number = "relative"
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
 
 [editor.file-picker]
 hidden = false
 
-[editor.statusline]
-left = ["mode", "spinner", "file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
-
 [editor.lsp]
 display-inlay-hints = false
 
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+separator = "│"
+left = ["mode", "spinner", "file-name", "file-type", "total-line-numbers", "file-encoding", "file-line-ending"]
+center = []
+right = ["selections", "primary-selection-length", "position", "position-percentage", "spacer", "diagnostics", "workspace-diagnostics", "version-control"]
+
 [keys.normal]
 Z = { Q = ":quit!", Z = ":x" }
+
+[keys.insert]
+"C-[" = "normal_mode"

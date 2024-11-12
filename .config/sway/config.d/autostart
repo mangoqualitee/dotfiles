@@ -3,8 +3,8 @@
 # Example configuration:
 #
 exec /usr/bin/swayidle -w \
-    timeout 300 '/usr/bin/swaylock -f -c 000000' \
-    timeout 600 '/usr/bin/swaymsg "output * power off"' resume '/usr/bin/swaymsg "output * power on"' \
+    timeout 600 '/usr/bin/swaylock -f -c 000000' \
+    timeout 900 '/usr/bin/swaymsg "output * power off"' resume '/usr/bin/swaymsg "output * power on"' \
     before-sleep '/usr/bin/swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off

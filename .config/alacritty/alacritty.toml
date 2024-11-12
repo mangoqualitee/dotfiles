@@ -1,3 +1,26 @@
+[general]
+import = [
+"themes/jonhoo.toml"
+]
+
 [font]
-normal = { family="JetBrainsMono Nerd Font" }
-size = 14
+size = 12
+
+[font.normal]
+family="JetBrainsMono Nerd Font"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Alt"
+
+[scrolling]
+history = 0
+
+[window]
+decorations = "none"
