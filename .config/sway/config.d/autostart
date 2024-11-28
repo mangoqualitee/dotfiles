@@ -18,4 +18,4 @@ exec /usr/lib/xdg-desktop-portal -r
 
 
 # Startup Apps
-exec /home/vishal/.local/bin/arrange-apps
+# exec /home/vishal/.local/bin/arrange-apps

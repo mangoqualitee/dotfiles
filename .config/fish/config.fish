@@ -1,9 +1,10 @@
 abbr -a o xdg-open
 abbr -a g git
-abbr -a gc 'git checkout'
 abbr -a ga 'git add -p'
+abbr -a gc 'git checkout'
 abbr -a p 'sudo pacman'
-abbr -a up 'sudo pacman -Syu'
+abbr -a pi 'sudo pacman -S'
+abbr -a pu 'sudo pacman -Syu'
 abbr -a rm trash
 abbr -a hx '$EDITOR'
 
@@ -11,11 +12,7 @@ if command -v eza >/dev/null
     abbr -a l eza
     abbr -a ls eza
     abbr -a ll 'eza -l'
-    abbr -a lll 'eza -la'
-else
-    abbr -a l ls
-    abbr -a ll 'ls -l'
-    abbr -a lll 'ls -la'
+    abbr -a la 'eza -la'
 end
 
 # Load lang-toolchains
@@ -27,12 +24,23 @@ set -gx PATH $HOME/.local/bin $PATH
 #set -gx PATH /opt/cuda/bin $PATH
 #set -gx LD_LIBRARY_PATH /opt/cuda/lib64/ $LD_LIBRARY_PATH
 set -gx LESSHISTFILE -
-set -gx EDITOR /usr/bin/helix
+set -gx EDITOR helix
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 set -gx PATH $HOME/.cabal/bin $PATH /home/vishal/.ghcup/bin # ghcup-env
+set -gx HELIX_RUNTIME $HOME/Repos/open-source/helix/runtime
 
+# fzf
+setenv FZF_DEFAULT_COMMAND 'fd --type file --follow'
+setenv FZF_CTRL_T_COMMAND 'fd --type file --follow'
+setenv FZF_DEFAULT_OPTS '--height 20%'
 
-if status is-interactive
+function fish_user_key_bindings
+    # bind \cl 'echo bad'
+    alias clear 'echo bad'
+    # bind \cz 'fg>/dev/null ^/dev/null'
+    if functions -q fzf_key_bindings
+        fzf_key_bindings
+    end
 end
 
 # Fish git prompt
@@ -61,30 +69,4 @@ function fish_prompt
     set_color red
     echo -n '| '
     set_color normal
-end
-
-if test -f /usr/share/autojump/autojump.fish
-    source /usr/share/autojump/autojump.fish
-end
-
-# colored man output
-# from http://linuxtidbits.wordpress.com/2009/03/23/less-colors-for-man-pages/
-setenv LESS_TERMCAP_mb \e'[01;31m' # begin blinking
-setenv LESS_TERMCAP_md \e'[01;38;5;74m' # begin bold
-setenv LESS_TERMCAP_me \e'[0m' # end mode
-setenv LESS_TERMCAP_se \e'[0m' # end standout-mode
-setenv LESS_TERMCAP_so \e'[38;5;246m' # begin standout-mode - info box
-setenv LESS_TERMCAP_ue \e'[0m' # end underline
-setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
-
-# fzf
-setenv FZF_DEFAULT_COMMAND 'fd --type file --follow'
-setenv FZF_CTRL_T_COMMAND 'fd --type file --follow'
-setenv FZF_DEFAULT_OPTS '--height 20%'
-
-function fish_user_key_bindings
-    bind \cz 'fg>/dev/null ^/dev/null'
-    if functions -q fzf_key_bindings
-        fzf_key_bindings
-    end
 end

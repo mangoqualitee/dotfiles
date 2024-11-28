@@ -1,7 +1,15 @@
 [general]
 import = [
 "themes/jonhoo.toml"
+# "themes/batlong.toml"
 ]
+
+[window]
+decorations = "none"
+# opacity = 0.95
+
+[scrolling]
+history = 0
 
 [font]
 size = 12
@@ -9,6 +17,17 @@ size = 12
 [font.normal]
 family="JetBrainsMono Nerd Font"
 
+[bell]
+animation = "EaseOut"
+duration = 300
+color = "#181800"
+
+[selection]
+save_to_clipboard = true
+
+[terminal]
+shell = "my_tmux.fish"
+ 
 [[keyboard.bindings]]
 action = "Paste"
 key = "V"
@@ -18,9 +37,3 @@ mods = "Alt"
 action = "Copy"
 key = "C"
 mods = "Alt"
-
-[scrolling]
-history = 0
-
-[window]
-decorations = "none"

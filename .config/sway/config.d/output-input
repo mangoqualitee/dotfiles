@@ -1,7 +1,7 @@
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:
 #
@@ -34,3 +34,9 @@ bindsym $mod+m output "HDMI-A-1" toggle ; output "eDP-1" toggle;
 
 output * transform 0
 
+default_border none
+gaps inner 10
+default_border pixel 2
+
+#output * bg "/home/vishal/Repos/dotfiles/wallpapers/eDP-1/1.png" fill
+exec ~/.local/bin/multibg-sway ~/Repos/dotfiles/wallpapers

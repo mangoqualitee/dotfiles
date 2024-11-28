@@ -1,2 +1,5 @@
 --target=${HOME}
 --ignore=\.stowrc
+--ignore=\packages.list
+--ignore=\deploy.sh
+--ignore=\wallpapers
