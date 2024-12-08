@@ -24,10 +24,10 @@ set -gx PATH $HOME/.local/bin $PATH
 #set -gx PATH /opt/cuda/bin $PATH
 #set -gx LD_LIBRARY_PATH /opt/cuda/lib64/ $LD_LIBRARY_PATH
 set -gx LESSHISTFILE -
-set -gx EDITOR helix
+set -gx EDITOR hx
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 set -gx PATH $HOME/.cabal/bin $PATH /home/vishal/.ghcup/bin # ghcup-env
-set -gx HELIX_RUNTIME $HOME/Repos/open-source/helix/runtime
+set -gx HELIX_RUNTIME $HOME/dev/open-source/tools/helix/runtime
 
 # fzf
 setenv FZF_DEFAULT_COMMAND 'fd --type file --follow'
@@ -52,7 +52,7 @@ set -g fish_prompt_pwd_dir_length 3
 
 function fish_prompt
     # Move prompt bottom
-    tput cup "$LINES"
+    # tput cup "$LINES"
     # Rest of the prompt
     set_color brblack
     echo -n "["(date "+%H:%M")"] "

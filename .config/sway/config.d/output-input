@@ -34,9 +34,9 @@ bindsym $mod+m output "HDMI-A-1" toggle ; output "eDP-1" toggle;
 
 output * transform 0
 
-default_border none
+#default_border none
 gaps inner 10
 default_border pixel 2
 
 #output * bg "/home/vishal/Repos/dotfiles/wallpapers/eDP-1/1.png" fill
-exec ~/.local/bin/multibg-sway ~/Repos/dotfiles/wallpapers
+exec /usr/bin/multibg-sway ~/dev/dotfiles/wallpapers

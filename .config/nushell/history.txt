@@ -1,0 +1,6 @@
+cd -
+cd
+cd ~/.config/alacritty/
+la
+ls -al themes/
+exit

@@ -19,5 +19,6 @@
 # BAR-SETTINGS
 bar {
     position bottom
-    status_command i3status-rs # -c /home/vishal/.config/sway/.i3status.conf
+    status_command i3status-rs
 }
+
