@@ -28,11 +28,11 @@ titlebar_padding 1
 titlebar_border_thickness 0
 
 # SCREEN-SETTINGS
-output "HDMI-A-1" disable
+# output "HDMI-A-1" disable
 output "eDP-1" enable
-bindsym $mod+m output "HDMI-A-1" toggle ; output "eDP-1" toggle;
+# bindsym $mod+m output "HDMI-A-1" toggle ; output "eDP-1" toggle;
 
-output * transform 0
+# output * transform 0
 
 #default_border none
 gaps inner 10
@@ -40,3 +40,11 @@ default_border pixel 2
 
 #output * bg "/home/vishal/Repos/dotfiles/wallpapers/eDP-1/1.png" fill
 exec /usr/bin/multibg-sway ~/dev/dotfiles/wallpapers
+
+# tap to click
+input 1267:12491:DELL09E1:00_04F3:30CB_Touchpad {
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
+}

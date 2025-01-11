@@ -7,20 +7,24 @@ icons = "awesome4"
 [[block]]
 block = "load"
 
-[[block]]
-block = "music"
-format = " $icon {$combo.str(max_w:15,rot_interval:0.5) |}"
-format_alt = " $icon $prev {$title.str(max_w:15,rot_interval:0.5) $play $next |}"
+# [[block]]
+# block = "music"
+# format = " $icon {$combo.str(max_w:15,rot_interval:0.5) |}"
+# format_alt = " $icon $prev {$title.str(max_w:15,rot_interval:0.5) $play $next |}"
 
 [[block]]
-block = "temperature"
-format = " $icon $max "
+block = "nvidia_gpu"
+format = "$icon $utilization $temperature"
 
 [[block]]
 block = "cpu"
 info_cpu = 20
 warning_cpu = 50
 critical_cpu = 90
+
+[[block]]
+block = "temperature"
+format = " $icon $max "
 
 [[block]]
 block = "memory"
@@ -33,8 +37,8 @@ block = "sound"
 block = "net"
 format = " $icon {$signal_strength $ssid |Wired connection}"
 
-[[block]]
-block = "external_ip"
+# [[block]]
+# block = "external_ip"
 
 [[block]]
 block = "disk_space"
@@ -64,3 +68,9 @@ action = "show"
 [[block.click]]
 button = "right"
 action = "toggle_paused"
+
+[[block]]
+block = "custom"
+json = true
+command = ''' echo "{\"icon\":\"ping\",\"text\":\"$(ping -c4 1.1.1.1 | tail -n1 | cut -d'/' -f5)\"}" '''
+interval = 60

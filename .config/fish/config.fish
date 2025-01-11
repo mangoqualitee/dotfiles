@@ -24,7 +24,7 @@ set -gx PATH $HOME/.local/bin $PATH
 #set -gx PATH /opt/cuda/bin $PATH
 #set -gx LD_LIBRARY_PATH /opt/cuda/lib64/ $LD_LIBRARY_PATH
 set -gx LESSHISTFILE -
-set -gx EDITOR hx
+set -gx EDITOR /home/vishal/.cargo/bin/hx
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 set -gx PATH $HOME/.cabal/bin $PATH /home/vishal/.ghcup/bin # ghcup-env
 set -gx HELIX_RUNTIME $HOME/dev/open-source/tools/helix/runtime
@@ -34,13 +34,25 @@ setenv FZF_DEFAULT_COMMAND 'fd --type file --follow'
 setenv FZF_CTRL_T_COMMAND 'fd --type file --follow'
 setenv FZF_DEFAULT_OPTS '--height 20%'
 
+# fish_vi_key_bindings
+
 function fish_user_key_bindings
     # bind \cl 'echo bad'
     alias clear 'echo bad'
     # bind \cz 'fg>/dev/null ^/dev/null'
+    bind \ck kill-line
     if functions -q fzf_key_bindings
         fzf_key_bindings
     end
+end
+
+function y
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        builtin cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
 end
 
 # Fish git prompt
