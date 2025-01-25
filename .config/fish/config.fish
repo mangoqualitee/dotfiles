@@ -19,6 +19,7 @@ end
 source "$HOME/.cargo/env.fish"
 $HOME/.miniforge3/bin/conda "shell.fish" hook | source
 test -d $HOME/.juliaup/bin && set -gx PATH $HOME/.juliaup/bin $PATH
+
 # Exports and Aliases
 set -gx PATH $HOME/.local/bin $PATH
 #set -gx PATH /opt/cuda/bin $PATH
@@ -66,8 +67,8 @@ function fish_prompt
     # Move prompt bottom
     # tput cup "$LINES"
     # Rest of the prompt
-    set_color brblack
-    echo -n "["(date "+%H:%M")"] "
+    # set_color brblack
+    # echo -n "["(date "+%H:%M")"] "
     set_color blue
     echo -n (hostnamectl hostname)
     if [ $PWD != $HOME ]

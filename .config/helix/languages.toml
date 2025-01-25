@@ -21,3 +21,9 @@ formatter = { command = "rustfmt" }
 [[language]]
 name = "julia"
 # formatter = { command = "julia", timeout = 60, args = [ "-e", "using JuliaFormatter; println(\"Hello\", length(ARGS)); format(ARGS[1]);", ] }
+# args = [ "--project=@LanguageServer", "--startup-file=no", "--history-file=no", "-e", "using LanguageServer; runserver()" ]
+
+[[language]]
+name = "python"
+formatter = { command = "ruff --format" }
+# auto-format = true

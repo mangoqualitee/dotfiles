@@ -12,7 +12,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term (/usr/bin/alacritty &)
+set $term /usr/bin/alacritty
 # Your preferred application launcher
 #set $menu dmenu_path | dmenu_run -fn "JetBrainsMono Nerd Font" | xargs swaymsg exec --
 set $menu wmenu-run -f "JetBrainsMono Nerd Font 12"
@@ -20,5 +20,6 @@ set $menu wmenu-run -f "JetBrainsMono Nerd Font 12"
 include /etc/sway/config.d/*
 include config.d/output-input
 include config.d/key-bindings
+include config.d/gestures
 include config.d/bar
 include config.d/autostart

@@ -7,7 +7,7 @@ import = [
 
 [window]
 decorations = "none"
-opacity = 0.95
+# opacity = 0.95
 
 [scrolling]
 history = 0
@@ -26,8 +26,8 @@ color = "#181800"
 [selection]
 save_to_clipboard = true
 
-[terminal]
-shell = "my_tmux.fish"
+# [terminal]
+# shell = "my_tmux.fish"
  
 [[keyboard.bindings]]
 action = "Paste"
