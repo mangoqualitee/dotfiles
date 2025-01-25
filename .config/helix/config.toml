@@ -1,6 +1,4 @@
-theme = "auto_theme"
-# theme = "gruvbox_dark_hard"
-# theme = "gruvbox_light_hard"
+theme = "dracula"
 
 [editor]
 mouse = false
