@@ -31,6 +31,7 @@ titlebar_border_thickness 0
 output "HDMI-A-3" disable
 output "eDP-1" enable
 bindsym $mod+m output "HDMI-A-3" toggle ; output "eDP-1" toggle;
+# output "HDMI-A-3" transform 270
 
 # output * transform 0
 

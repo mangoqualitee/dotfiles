@@ -2,20 +2,36 @@
 
 
 ### Variables
-font pango: JetBrainsMono Nerd Font 10
+# set $font JetBrainsMono Nerd Font 10
+
+set $fontsize 10
+# set $font Iosevka Nerd Font
+set $font JetBrainsMono Nerd Font
+font pango: $font $fontsize
+
+
+input "type:keyboard" {
+    xkb_layout us,us
+    xkb_variant ,dvp
+    xkb_options grp:alt_shift_toggle,ctrl:nocaps,ctrl:lctrl_meta
+}
 
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
+
 # Your preferred terminal emulator
+# set $term /usr/bin/alacritty -e "~/.local/bin/mytmux.fish"
 set $term /usr/bin/ghostty
+
 # Your preferred application launcher
-#set $menu dmenu_path | dmenu_run -fn "JetBrainsMono Nerd Font" | xargs swaymsg exec --
-set $menu wmenu-run -f "JetBrainsMono Nerd Font 12"
+# set $menu dmenu_path | dmenu_run -fn "$font" | xargs swaymsg exec --
+set $menu wmenu-run -f "$font $fontsize"
 
 include /etc/sway/config.d/*
 include config.d/output-input

@@ -23,3 +23,6 @@ exec /usr/lib/xdg-desktop-portal -r
 
 # Notification Daemon
 exec swaync
+
+# Remote input daemon
+exec kdeconnectd
