@@ -148,8 +148,11 @@ keybinds clear-defaults=true {
         bind "Alt j" { MoveFocus "down"; }
         bind "Alt k" { MoveFocus "up"; }
         bind "Alt l" { MoveFocusOrTab "right"; }
-        bind "Alt n" { NewPane; }
+        // bind "Alt n" { NewPane; }
         bind "Alt o" { MoveTab "right"; }
+    }
+    shared_except "locked" {
+        bind "Alt n" { NewPane; }
     }
     shared_except "locked" "renametab" "renamepane" {
         bind "Ctrl g" { SwitchToMode "locked"; }
@@ -247,6 +250,47 @@ simplified_ui true
 // Default: default
 // 
 theme "dracula"
+
+//dark-themes
+// theme "ansi"
+// theme "ao"
+// theme "atelier-sulphurpool"
+// theme "ayu_mirage"
+// theme "ayu_dark"
+// theme "catppuccin-frappe"
+// theme "catppuccin-macchiato"
+// theme "cyber-noir"
+// theme "blade-runner"
+// theme "retro-wave"
+// theme "dracula"
+// theme "everforest-dark"
+// theme "gruvbox-dark"
+// theme "iceberg-dark"
+// theme "kanagawa"
+// theme "lucario"
+// theme "menace"
+// theme "molokai-dark"
+// theme "night-owl"
+// theme "nightfox"
+// theme "nord"
+// theme "one-half-dark"
+// theme "onedark"
+// theme "solarized-dark"
+// theme "tokyo-night-dark"
+// theme "tokyo-night-storm"
+// theme "tokyo-night"
+// theme "vesper"
+
+//light-themes
+// theme "ayu_light"
+// theme "catppuccin-latte"
+// theme "everforest-light"
+// theme "gruvbox-light"
+// theme "iceberg-light"
+// theme "dayfox"
+// theme "pencil-light"
+// theme "solarized-light"
+// theme "tokyo-night-light"
  
 // Choose the base input mode of zellij.
 // Default: normal

@@ -1,1 +1,2 @@
-/usr/bin/steam --enable-features=UseOzonePlatform --ozone-platform=wayland 
+# /usr/bin/steam --enable-features=UseOzonePlatform --ozone-platform=wayland 
+/usr/bin/steam

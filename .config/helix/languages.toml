@@ -18,12 +18,20 @@ formatter = { command = "clang-format" }
 name = "rust"
 formatter = { command = "rustfmt" }
 
-[[language]]
-name = "julia"
+# [[language]]
+# name = "julia"
 # formatter = { command = "julia", timeout = 60, args = [ "-e", "using JuliaFormatter; println(\"Hello\", length(ARGS)); format(ARGS[1]);", ] }
-# args = [ "--project=@LanguageServer", "--startup-file=no", "--history-file=no", "-e", "using LanguageServer; runserver()" ]
 
-[[language]]
-name = "python"
-formatter = { command = "ruff --format" }
-# auto-format = true
+# [language-server.julia]
+# command = "julia"
+# # args = [ "--project=@LanguageServer", "--startup-file=no", "--history-file=no", "-e", "using LanguageServer; runserver()" ]
+# args = [ "--project=.", "--startup-file=no", "--history-file=no", "-e", "using LanguageServer; runserver()" ]
+
+# [[language]]
+# name = "markdown"
+# # scope = "source.md"
+# # injection-regex = "md|markdown"
+# # file-types = ["md", "markdown", "PULLREQ_EDITMSG", "mkd", "mdwn", "mdown", "markdn", "mdtxt", "mdtext", "qmd", "workbook"]
+# # roots = [".marksman.toml"]
+# # language-servers = [ "marksman" ]
+# indent = { tab-width = 2, unit = "  " }

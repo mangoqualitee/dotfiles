@@ -1,3 +1,9 @@
-font-size = 14
-window-decoration = false
-theme = Dracula
+font-family = "Iosevka Nerd Font"
+font-size = 18
+# window-decoration = false
+# theme = JetBrains Darcula
+# theme = GruvboxLightHard
+# theme = Dracula
+# theme = tokyonight-day
+theme = gruber-darker
+keybind = alt+enter=unbind

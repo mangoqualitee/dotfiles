@@ -1,10 +1,13 @@
-theme = "dracula"
+theme = "gruber-darker"
+# theme = "dracula"
+# theme = "gruvbox_light_hard"
+# theme = "tokyonight_day"
 
 [editor]
 mouse = false
 line-number = "relative"
 color-modes = true
-text-width = 80
+# text-width = 80
 
 [editor.soft-wrap]
 enable = true
@@ -19,19 +22,31 @@ select = "underline"
 hidden = false
 
 [editor.lsp]
-display-inlay-hints = false
+# display-inlay-hints = false
+# auto-signature-help = false
 
 [editor.statusline]
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
 separator = "│"
-left = ["mode", "spinner", "file-name", "file-type", "total-line-numbers", "file-encoding", "file-line-ending"]
-center = []
-right = ["selections", "primary-selection-length", "position", "position-percentage", "spacer", "diagnostics", "workspace-diagnostics", "version-control"]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["position", "diagnostics", "workspace-diagnostics", "version-control"]
 
 [keys.normal]
 Z = { Q = ":quit!", Z = ":x" }
+# j = "move_char_left"
+# i = "move_visual_line_up"
+# l = "move_char_right"
+# k = "move_visual_line_down"
 
 [keys.insert]
 "C-[" = "normal_mode"
+"C-p" = "signature_help"
+
+[keys.normal.C-y]
+y = ":sh zellij run -c -f -- bash ~/.local/bin/yazi-picker open"
+# y = ":sh zellij run -c -- bash ~/.local/bin/yazi-picker open"
+# y = ":sh zellij run -- bash ~/.local/bin/yazi-picker open"
+
