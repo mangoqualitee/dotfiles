@@ -21,6 +21,7 @@ $HOME/.miniforge3/bin/conda "shell.fish" hook | source
 test -d $HOME/.juliaup/bin && set -gx PATH $HOME/.juliaup/bin $PATH
 
 # Exports and Aliases
+set -gx PATH /home/vishal/.local/share/gem/ruby/3.3.0/bin $PATH
 set -gx PATH $HOME/.local/bin $PATH
 set -gx PATH $HOME/.config/zide/bin $PATH
 #set -gx PATH /opt/cuda/bin $PATH

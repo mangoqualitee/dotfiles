@@ -35,18 +35,21 @@ center = ["file-name"]
 right = ["position", "diagnostics", "workspace-diagnostics", "version-control"]
 
 [keys.normal]
-Z = { Q = ":quit!", Z = ":x" }
+C-y = [
+  ':sh rm -f /tmp/yazi-path',
+  ':insert-output yazi %{buffer_name} --chooser-file=/tmp/yazi-path',
+  ':open %sh{cat /tmp/yazi-path}',
+  ':redraw',
+]
+
+# Z = { Q = ":quit!", Z = ":x" }
 # j = "move_char_left"
 # i = "move_visual_line_up"
 # l = "move_char_right"
 # k = "move_visual_line_down"
 
+
 [keys.insert]
 "C-[" = "normal_mode"
 "C-p" = "signature_help"
-
-[keys.normal.C-y]
-y = ":sh zellij run -c -f -- bash ~/.local/bin/yazi-picker open"
-# y = ":sh zellij run -c -- bash ~/.local/bin/yazi-picker open"
-# y = ":sh zellij run -- bash ~/.local/bin/yazi-picker open"
 
