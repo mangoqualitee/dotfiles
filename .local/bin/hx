@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+echo "$(pwd)" >"/home/vishal/workingdir"; /home/vishal/.cargo/bin/hx $@

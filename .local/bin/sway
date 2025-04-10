@@ -24,4 +24,4 @@
 # # Hardware acceleration?
 # export LIBVA_DRIVER_NAME=nvidia
 
-/usr/bin/sway --unsupported-gpu "$@"
+(/usr/bin/sway --unsupported-gpu "$@" &)

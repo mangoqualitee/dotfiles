@@ -1,42 +1,100 @@
 # Read `man 5 sway` for a complete reference.
 
+include /etc/sway/config.d/*
 
-### Variables
+# include config.d/variables
 # set $font JetBrainsMono Nerd Font 10
-
-set $fontsize 10
-# set $font Iosevka Nerd Font
-set $font JetBrainsMono Nerd Font
+set $wallpaper "/home/vishal/dev/dotfiles/wallpapers/library/programming-languages/rust_broken.png"
+set $lockwallpaper ~/dev/dotfiles/wallpapers/library/windows/windows.jpg
+set $fontsize 11
+set $font Iosevka Nerd Font
+# set $font JetBrainsMono Nerd Font
 font pango: $font $fontsize
-
-
 input "type:keyboard" {
     xkb_layout us,us,us
     xkb_variant ,dvp,workman-p
     xkb_options grp:alt_shift_toggle
     # xkb_options ctrl:nocaps,ctrl:lctrl_meta
 }
-
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
-
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
-
 # Your preferred terminal emulator
-# set $term /usr/bin/alacritty -e "~/.local/bin/mytmux.fish"
-set $term /usr/bin/ghostty
-
+set $term /usr/bin/alacritty
 # Your preferred application launcher
 # set $menu dmenu_path | dmenu_run -fn "$font" | xargs swaymsg exec --
 set $menu wmenu-run -f "$font $fontsize"
 
-include /etc/sway/config.d/*
-include config.d/output-input
+# # include config.d/theme
+# include /home/vishal/dev/others/base16/templates/base16-sway/themes/base16-gruvbox-dark-hard.config
+# # Basic color configuration using the Base16 variables for windows and borders.
+# # Property Name         Border  BG      Text    Indicator Child Border
+# client.focused          $base05 $base0D $base00 $base0D $base0D
+# client.focused_inactive $base01 $base01 $base05 $base03 $base01
+# client.unfocused        $base01 $base00 $base05 $base01 $base01
+# client.urgent           $base08 $base08 $base00 $base08 $base08
+# client.placeholder      $base00 $base00 $base05 $base00 $base00
+# client.background       $base07
+
+# include config.d/output-input
+# default_border pixel 3
+# default_border none
+# default_floating_border pixel 3
+# gaps inner 10
+# titlebar_padding 1
+# titlebar_border_thickness 0
+# SCREEN-SETTINGS
+output "HDMI-A-3" disable
+output "eDP-1" enable
+# output "HDMI-A-3" transform 270
+# output * transform 0
+# output * bg "/home/vishal/Repos/dotfiles/wallpapers/eDP-1/1.png" fill
+output * bg $wallpaper fill
+# tap to click
+input 1267:12491:DELL09E1:00_04F3:30CB_Touchpad {
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
+}
+
 include config.d/key-bindings
-include config.d/gestures
-include config.d/bar
-include config.d/autostart
+
+# include config.d/gestures
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next
+
+# include config.d/bar
+bar {
+  id bar
+  # colors {
+  #     background $base00
+  #     separator  $base01
+  #     statusline $base04
+  #     # State             Border  BG      Text
+  #     focused_workspace   $base05 $base0D $base00
+  #     active_workspace    $base05 $base03 $base00
+  #     inactive_workspace  $base03 $base01 $base05
+  #     urgent_workspace    $base08 $base08 $base00
+  #     binding_mode        $base00 $base0A $base00
+  # }
+  position bottom
+  status_command i3status -c $HOME/.config/sway/i3status.conf
+  # status_command i3status-rs
+}
+
+# include config.d/autostart
+# idle
+exec /usr/bin/swayidle -w \
+    timeout 600 '/usr/bin/swaylock -f -c 000000' \
+    timeout 900 '/usr/bin/swaymsg "output * power off"' resume '/usr/bin/swaymsg "output * power on"' \
+    before-sleep '/usr/bin/swaylock -f -c 000000'
+# screen sharing
+exec /usr/lib/xdg-desktop-portal -r
+# notification daemon
+exec swaync
+# exec /usr/bin/multibg-sway ~/dev/dotfiles/wallpapers

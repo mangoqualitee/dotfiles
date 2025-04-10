@@ -1,55 +1,29 @@
-theme = "gruber-darker"
-# theme = "dracula"
-# theme = "gruvbox_light_hard"
-# theme = "tokyonight_day"
+# theme = "base16-gruvbox-dark-hard"
 
 [editor]
-mouse = false
 line-number = "relative"
 color-modes = true
-# text-width = 80
+# auto-completion = false
 
 [editor.soft-wrap]
 enable = true
-wrap-at-text-width = true
-
-[editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "underline"
 
 [editor.file-picker]
 hidden = false
 
-[editor.lsp]
-# display-inlay-hints = false
-# auto-signature-help = false
-
-[editor.statusline]
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
-separator = "│"
-left = ["mode", "spinner"]
-center = ["file-name"]
-right = ["position", "diagnostics", "workspace-diagnostics", "version-control"]
-
-[keys.normal]
-C-y = [
-  ':sh rm -f /tmp/yazi-path',
-  ':insert-output yazi %{buffer_name} --chooser-file=/tmp/yazi-path',
-  ':open %sh{cat /tmp/yazi-path}',
-  ':redraw',
+[keys.normal.space]
+q = [
+  ":sh rm -f /tmp/unique-file-h21a434",
+  ":insert-output yazi '%{buffer_name}' --chooser-file=/tmp/unique-file-h21a434",
+  ":insert-output echo \"x1b[?1049h\" > /dev/tty",
+  ":open %sh{cat /tmp/unique-file-h21a434}",
+  ":redraw",
 ]
-
-# Z = { Q = ":quit!", Z = ":x" }
-# j = "move_char_left"
-# i = "move_visual_line_up"
-# l = "move_char_right"
-# k = "move_visual_line_down"
-
-
-[keys.insert]
-"C-[" = "normal_mode"
-"C-p" = "signature_help"
+Q = [
+  ":sh rm -f /tmp/unique-file-u41ae14",
+  ":insert-output yazi '%{workspace_directory}' --chooser-file=/tmp/unique-file-u41ae14",
+  ":insert-output echo \"x1b[?1049h\" > /dev/tty",
+  ":open %sh{cat /tmp/unique-file-u41ae14}",
+  ":redraw",
+]
 

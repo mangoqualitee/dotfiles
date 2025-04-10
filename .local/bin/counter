@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Read input from stdin
+input=$(cat)
+
+# Print the raw word counts (similar to Counter output in Python)
+echo "Word counts:"
+echo "$input" | tr -s '[:space:]' '\n' | grep -v '^$' | sort | uniq -c | sort -nr

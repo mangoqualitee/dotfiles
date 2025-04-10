@@ -1,3 +1,7 @@
+[[language]]
+name = "fish"
+auto-format = false
+
 [language-server]
 clangd = { command = "clangd", args = [ "--clang-tidy" ] }
 
@@ -6,7 +10,7 @@ check = {command = "clippy", extraArgs = ["--", "-W", "clippy::unwrap_used", "-W
 
 [[language]]
 name = "c"
-auto-format = true
+# auto-format = true
 formatter = { command = "clang-format" }
 
 [[language]]
