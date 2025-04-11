@@ -83,8 +83,7 @@ bar {
   #     binding_mode        $base00 $base0A $base00
   # }
   position bottom
-  status_command i3status -c $HOME/.config/sway/i3status.conf
-  # status_command i3status-rs
+  status_command i3status-rs
 }
 
 # include config.d/autostart
