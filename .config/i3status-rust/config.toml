@@ -1,9 +1,12 @@
+[theme]
+theme = "solarized-dark"
+
 [icons]
 icons = "awesome4"
 
 [[block]]
 block = "custom"
-command = '''swaymsg -t get_inputs | jq -r '.[0].xkb_active_layout_name' | sed -E 's/.*programmer Dvorak.*/dvorak-p/; s/.*Workman-P.*/workman-p/; s/.*English \(US\).*/qwerty/' '''
+command = '''swaymsg -t get_inputs | jq -r '.[1].xkb_active_layout_name' | sed -E 's/.*programmer Dvorak.*/dvorak-p/; s/.*Workman-P.*/workman-p/; s/.*English \(US\).*/qwerty/' '''
 interval = 1
 
 [[block]]

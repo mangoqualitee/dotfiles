@@ -4,7 +4,7 @@ if status --is-interactive
     abbr -a gc 'git checkout'
     abbr -a hx '$EDITOR'
     abbr -a l  eza
-    abbr -a la 'eza -la'
+    abbr -a la 'eza -la --group-directories-last'
     abbr -a ll 'eza -l'
     abbr -a ls eza
     abbr -a o  xdg-open
@@ -16,12 +16,18 @@ if status --is-interactive
     abbr -a y yazi
 
     # lang-toolchains
-    set -gx PATH "$HOME/.miniconda/bin" $PATH
-    set -gx PATH "$HOME/.cargo/bin" $PATH
-# set -gx PATH "$HOME/.miniforge3/bin" $PATH  # commented out by conda initialize
+    # set -gx PATH "$HOME/.miniconda/bin" $PATH
+    source "$HOME/.cargo/env.fish"
+    opam env | source
     set -gx PATH "$HOME/.juliaup/bin" $PATH
     set -gx PATH "$HOME/.local/bin" $PATH
     set -gx PATH "$HOME/node_modules/vscode-json-languageserver/bin" $PATH
+    
+
+    # set -x CMAKE_C_COMPILER gcc
+    # set -x CMAKE_CXX_COMPILER g++
+    # set -x CMAKE_MAKE_PROGRAM (which ninja)
+
 
     #set -gx PATH /opt/cuda/bin $PATH
     #set -gx LD_LIBRARY_PATH /opt/cuda/lib64/ $LD_LIBRARY_PATH

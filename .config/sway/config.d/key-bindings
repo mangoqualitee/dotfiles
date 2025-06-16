@@ -5,6 +5,9 @@
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+Shift+Return exec emacsclient -c
+
+    bindsym $mod+y exec $BROWSER
 
     # Kill focused window
     bindsym $mod+Shift+q kill

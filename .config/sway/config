@@ -4,16 +4,16 @@ include /etc/sway/config.d/*
 
 # include config.d/variables
 # set $font JetBrainsMono Nerd Font 10
-set $wallpaper "/home/vishal/dev/dotfiles/wallpapers/library/programming-languages/rust_broken.png"
-set $lockwallpaper ~/dev/dotfiles/wallpapers/library/windows/windows.jpg
-set $fontsize 11
+set $wallpaper     "~/dev/dotfiles/wallpapers/library/scenery/aurora.jpeg"
+set $lockwallpaper "~/dev/dotfiles/wallpapers/library/scenery/stag.jpg"
+set $fontsize 10
 set $font Iosevka Nerd Font
 # set $font JetBrainsMono Nerd Font
 font pango: $font $fontsize
 input "type:keyboard" {
     xkb_layout us,us,us
     xkb_variant ,dvp,workman-p
-    xkb_options grp:alt_shift_toggle
+    xkb_options grp:ralt_rshift_toggle
     # xkb_options ctrl:nocaps,ctrl:lctrl_meta
 }
 # Logo key. Use Mod1 for Alt.
@@ -42,7 +42,7 @@ set $menu wmenu-run -f "$font $fontsize"
 
 # include config.d/output-input
 # default_border pixel 3
-# default_border none
+default_border none
 # default_floating_border pixel 3
 # gaps inner 10
 # titlebar_padding 1
@@ -58,7 +58,8 @@ output * bg $wallpaper fill
 input 1267:12491:DELL09E1:00_04F3:30CB_Touchpad {
     dwt enabled
     tap enabled
-    natural_scroll enabled
+    # natural_scroll enabled
+    # scroll_method "none"
     middle_emulation enabled
 }
 
@@ -93,7 +94,7 @@ exec /usr/bin/swayidle -w \
     timeout 900 '/usr/bin/swaymsg "output * power off"' resume '/usr/bin/swaymsg "output * power on"' \
     before-sleep '/usr/bin/swaylock -f -c 000000'
 # screen sharing
-exec /usr/lib/xdg-desktop-portal -r
+exec --no-startup-id /usr/lib/xdg-desktop-portal -r
 # notification daemon
 exec swaync
 # exec /usr/bin/multibg-sway ~/dev/dotfiles/wallpapers
