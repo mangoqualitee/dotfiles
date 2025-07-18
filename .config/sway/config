@@ -4,8 +4,8 @@ include /etc/sway/config.d/*
 
 # include config.d/variables
 # set $font JetBrainsMono Nerd Font 10
-set $wallpaper     "~/dev/dotfiles/wallpapers/library/scenery/aurora.jpeg"
-set $lockwallpaper "~/dev/dotfiles/wallpapers/library/scenery/stag.jpg"
+set $wallpaper "$DOTFILES/wallpapers/library/bing/TokyoSunrise.jpg"
+set $lockwallpaper     "$DOTFILES/wallpapers/library/bing/ConstitucionStation.jpg"
 set $fontsize 10
 set $font Iosevka Nerd Font
 # set $font JetBrainsMono Nerd Font

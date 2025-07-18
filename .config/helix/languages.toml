@@ -1,12 +1,30 @@
 [[language]]
-name = "fish"
+name = "julia"
+scope = "source.julia"
+injection-regex = "julia"
+file-types = ["jl"]
+roots = ["Project.toml", "Manifest.toml", "JuliaProject.toml"]
+comment-token = "#"
+language-servers = ["julia-lsp"]
+indent = { tab-width = 4, unit = "    " }
+language-id = "julia"
 auto-format = false
 
-[language-server]
-clangd = { command = "clangd", args = [ "--clang-tidy" ] }
-
-[language-server.rust-analyzer.config]
-check = {command = "clippy", extraArgs = ["--", "-W", "clippy::unwrap_used", "-W", "clippy::expect_used", "-W", "clippy::pedantic", "-W", "clippy::nursery"]}
+[language-server.julia-lsp]
+command = "julia"
+args = [
+  "--startup-file=no",
+  "--history-file=no",
+  "-e",
+  """
+  using LanguageServer, SymbolServer;
+  import Pkg;
+  env_path = dirname(Pkg.Types.Context().env.project_file);
+  depot_path = get(ENV, "JULIA_DEPOT_PATH", "");
+  server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, depot_path, nothing, "");
+  run(server);
+  """
+]
 
 [[language]]
 name = "c"
@@ -18,18 +36,15 @@ name = "cpp"
 auto-format = true
 formatter = { command = "clang-format" }
 
+[language-server]
+clangd = { command = "clangd", args = [ "--clang-tidy" ] }
+
 [[language]]
 name = "rust"
 formatter = { command = "rustfmt" }
 
-# [[language]]
-# name = "julia"
-# formatter = { command = "julia", timeout = 60, args = [ "-e", "using JuliaFormatter; println(\"Hello\", length(ARGS)); format(ARGS[1]);", ] }
-
-# [language-server.julia]
-# command = "julia"
-# # args = [ "--project=@LanguageServer", "--startup-file=no", "--history-file=no", "-e", "using LanguageServer; runserver()" ]
-# args = [ "--project=.", "--startup-file=no", "--history-file=no", "-e", "using LanguageServer; runserver()" ]
+[language-server.rust-analyzer.config]
+check = {command = "clippy", extraArgs = ["--", "-W", "clippy::unwrap_used", "-W", "clippy::expect_used", "-W", "clippy::pedantic", "-W", "clippy::nursery"]}
 
 
 [[language]]

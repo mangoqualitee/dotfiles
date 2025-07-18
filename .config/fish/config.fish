@@ -1,14 +1,15 @@
 if status --is-interactive
-    abbr -a g  git
+    abbr -a g git
     abbr -a ga 'git add -p'
     abbr -a gc 'git checkout'
+    abbr -a gs 'git status'
     abbr -a hx '$EDITOR'
-    abbr -a l  eza
+    abbr -a l eza
     abbr -a la 'eza -la --group-directories-last'
     abbr -a ll 'eza -l'
     abbr -a ls eza
-    abbr -a o  xdg-open
-    abbr -a p  'sudo pacman'
+    abbr -a o xdg-open
+    abbr -a p 'sudo pacman'
     abbr -a pi 'sudo pacman -S'
     abbr -a pu 'sudo pacman -Syu'
     abbr -a rm trash
@@ -22,19 +23,18 @@ if status --is-interactive
     set -gx PATH "$HOME/.juliaup/bin" $PATH
     set -gx PATH "$HOME/.local/bin" $PATH
     set -gx PATH "$HOME/node_modules/vscode-json-languageserver/bin" $PATH
-    
 
     # set -x CMAKE_C_COMPILER gcc
     # set -x CMAKE_CXX_COMPILER g++
     # set -x CMAKE_MAKE_PROGRAM (which ninja)
 
-
     #set -gx PATH /opt/cuda/bin $PATH
     #set -gx LD_LIBRARY_PATH /opt/cuda/lib64/ $LD_LIBRARY_PATH
 
     # setenv LESSHISTFILE -
-    setenv HELIX_RUNTIME $HOME/dev/open-source/tools/helix/runtime
+    # setenv HELIX_RUNTIME $HOME/dev/open-source/tools/helix/runtime
     setenv EDITOR /home/vishal/.local/bin/hx
+    setenv DOTFILES /home/vishal/Documents/dotfiles
     setenv BROWSER /usr/bin/vivaldi-stable
 
     function fish_user_key_bindings
@@ -64,17 +64,3 @@ if status --is-interactive
     # base16-gruvbox-dark-hard
 
 end
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-if test -f /home/vishal/.miniforge3/bin/conda
-    eval /home/vishal/.miniforge3/bin/conda "shell.fish" "hook" $argv | source
-else
-    if test -f "/home/vishal/.miniforge3/etc/fish/conf.d/conda.fish"
-        . "/home/vishal/.miniforge3/etc/fish/conf.d/conda.fish"
-    else
-        set -x PATH "/home/vishal/.miniforge3/bin" $PATH
-    end
-end
-# <<< conda initialize <<<
-

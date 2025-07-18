@@ -153,7 +153,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
 bindsym $mod+control+l exec /usr/bin/swaylock -c 000000 -i $lockwallpaper
-bindsym $mod+shift+s exec /usr/bin/grimshot copy area
+bindsym $mod+shift+s exec /usr/bin/grimshot savecopy anything
 
 # Toggle control center
 bindsym $mod+Shift+n exec swaync-client -t -sw
