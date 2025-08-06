@@ -166,3 +166,6 @@ bindsym $mod+t bar mode toggle bar
 
 # toggle screen
 bindsym $mod+m output "HDMI-A-3" toggle ; output "eDP-1" toggle;
+
+# File Manager
+bindsym $mod+o exec nautilus

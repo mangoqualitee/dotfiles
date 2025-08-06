@@ -1,0 +1,159 @@
+# Blue theme for Helix editor
+# Based on Vim's blue colorscheme
+
+"ui.background" = { bg = "dark_blue" }
+"ui.background.separator" = "dark_cyan"
+"ui.cursor" = { fg = "black", bg = "bright_green" }
+"ui.cursor.insert" = { fg = "black", bg = "gold" }
+"ui.cursor.select" = { fg = "black", bg = "bright_green" }
+"ui.cursor.match" = { bg = "blue", modifiers = ["underlined"] }
+"ui.cursor.primary" = { fg = "black", bg = "bright_green" }
+"ui.cursor.secondary" = { fg = "black", bg = "gold" }
+"ui.cursorline.primary" = { bg = "blue" }
+"ui.cursorline.secondary" = { bg = "blue" }
+"ui.cursorcolumn.primary" = { bg = "blue" }
+"ui.cursorcolumn.secondary" = { bg = "blue" }
+"ui.selection" = { bg = "dark_cyan" }
+"ui.selection.primary" = { bg = "dark_cyan" }
+"ui.linenr" = "cyan"
+"ui.linenr.selected" = { fg = "gold", bg = "blue", modifiers = ["bold"] }
+"ui.statusline" = { fg = "dark_blue", bg = "cyan" }
+"ui.statusline.inactive" = { fg = "dark_blue", bg = "dark_cyan" }
+"ui.statusline.normal" = { fg = "dark_blue", bg = "cyan" }
+"ui.statusline.insert" = { fg = "dark_blue", bg = "bright_green" }
+"ui.statusline.select" = { fg = "dark_blue", bg = "gold" }
+"ui.statusline.separator" = "dark_cyan"
+"ui.popup" = { bg = "dark_cyan" }
+"ui.popup.info" = { bg = "dark_cyan" }
+"ui.window" = "dark_cyan"
+"ui.help" = { bg = "dark_cyan" }
+"ui.text" = "gold"
+"ui.text.focus" = "white"
+"ui.text.inactive" = "gray"
+"ui.text.info" = "cyan"
+"ui.virtual" = "magenta"
+"ui.virtual.ruler" = { bg = "dark_magenta" }
+"ui.virtual.whitespace" = "cyan"
+"ui.virtual.indent-guide" = "gray"
+"ui.virtual.inlay-hint" = "comment"
+"ui.virtual.wrap" = "magenta"
+"ui.virtual.jump-label" = { fg = "black", bg = "magenta" }
+"ui.menu" = { fg = "white", bg = "dark_cyan" }
+"ui.menu.selected" = { fg = "dark_cyan", bg = "white" }
+"ui.menu.scroll" = { fg = "white", bg = "dark_cyan" }
+"ui.highlight" = { bg = "blue" }
+"ui.highlight.frameline" = { bg = "red" }
+
+"warning" = "magenta"
+"error" = "coral"
+"info" = "cyan"
+"hint" = "green"
+"diagnostic" = { modifiers = ["underlined"] }
+"diagnostic.hint" = { fg = "green", modifiers = ["underlined"] }
+"diagnostic.info" = { fg = "cyan", modifiers = ["underlined"] }
+"diagnostic.warning" = { fg = "magenta", modifiers = ["underlined"] }
+"diagnostic.error" = { fg = "coral", modifiers = ["underlined"] }
+
+"special" = "magenta"
+"attribute" = "magenta"
+"type" = { fg = "orange", modifiers = ["bold"] }
+"type.builtin" = { fg = "orange", modifiers = ["bold"] }
+"type.parameter" = "orange"
+"type.enum" = "orange"
+"type.enum.variant" = "orange"
+"constructor" = "gold"
+"constant" = "cyan"
+"constant.builtin" = "cyan"
+"constant.builtin.boolean" = "cyan"
+"constant.character" = "cyan"
+"constant.character.escape" = "magenta"
+"constant.numeric" = "cyan"
+"string" = "cyan"
+"string.regexp" = "magenta"
+"string.special" = "magenta"
+"comment" = { fg = "comment", modifiers = ["bold"] }
+"variable" = "gray"
+"variable.builtin" = "gray"
+"variable.parameter" = "gray"
+"variable.other.member" = "gray"
+"label" = "gold"
+"punctuation" = "white"
+"punctuation.delimiter" = "magenta"
+"punctuation.bracket" = "white"
+"punctuation.special" = "magenta"
+"keyword" = "white"
+"keyword.control" = "white"
+"keyword.control.conditional" = "white"
+"keyword.control.repeat" = "white"
+"keyword.control.import" = "green"
+"keyword.control.return" = "white"
+"keyword.control.exception" = "white"
+"keyword.operator" = "orange"
+"keyword.directive" = "green"
+"keyword.function" = "white"
+"keyword.storage" = "orange"
+"keyword.storage.type" = "orange"
+"keyword.storage.modifier" = "orange"
+"operator" = "orange"
+"function" = "gray"
+"function.builtin" = "gray"
+"function.method" = "gray"
+"function.macro" = "green"
+"tag" = "magenta"
+"namespace" = "gray"
+"markup" = "gold"
+"markup.heading" = "magenta"
+"markup.heading.marker" = "magenta"
+"markup.heading.1" = { fg = "magenta", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "magenta", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "magenta", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "magenta", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "magenta", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "magenta", modifiers = ["bold"] }
+"markup.list" = "gold"
+"markup.list.numbered" = "gold"
+"markup.list.unnumbered" = "gold"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link" = { fg = "cyan", modifiers = ["underlined"] }
+"markup.link.url" = { fg = "cyan", modifiers = ["underlined"] }
+"markup.link.label" = "gold"
+"markup.link.text" = "cyan"
+"markup.quote" = "gray"
+"markup.raw" = "cyan"
+"markup.raw.inline" = "cyan"
+"markup.raw.block" = "cyan"
+
+"diff.plus" = "diff_add"
+"diff.minus" = "diff_delete"
+"diff.delta" = "diff_change"
+
+[palette]
+black = "#000000"
+dark_blue = "#000087"
+blue = "#005faf"
+bright_blue = "#5c5cff"
+dark_cyan = "#008787"
+cyan = "#5fffff"
+bright_cyan = "#00ffff"
+dark_green = "#00cd00"
+green = "#00ff00"
+bright_green = "#00ff00"
+dark_magenta = "#870087"
+magenta = "#d787d7"
+bright_magenta = "#ff00ff"
+dark_red = "#cd0000"
+red = "#d70000"
+coral = "#ff7f50"
+dark_yellow = "#cdcd00"
+gold = "#ffd700"
+yellow = "#ffff00"
+orange = "#ffa500"
+gray = "#bcbcbc"
+comment = "#878787"
+dark_gray = "#7f7f7f"
+white = "#ffffff"
+diff_add = "#5f875f"
+diff_change = "#5f87af"
+diff_delete = "#af5faf"

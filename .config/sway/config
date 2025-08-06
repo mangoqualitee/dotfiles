@@ -4,8 +4,8 @@ include /etc/sway/config.d/*
 
 # include config.d/variables
 # set $font JetBrainsMono Nerd Font 10
-set $wallpaper "$DOTFILES/wallpapers/library/bing/TokyoSunrise.jpg"
-set $lockwallpaper     "$DOTFILES/wallpapers/library/bing/ConstitucionStation.jpg"
+set $wallpaper     "~/Dropbox/Wallpapers/anime-onepiece.jpg"
+set $lockwallpaper "~/Dropbox/Wallpapers/anime-demonslayer.png"
 set $fontsize 10
 set $font Iosevka Nerd Font
 # set $font JetBrainsMono Nerd Font
@@ -15,6 +15,7 @@ input "type:keyboard" {
     xkb_variant ,dvp,workman-p
     xkb_options grp:ralt_rshift_toggle
     # xkb_options ctrl:nocaps,ctrl:lctrl_meta
+    # use keyd, interception-caps2esc udevmon
 }
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
@@ -44,7 +45,7 @@ set $menu wmenu-run -f "$font $fontsize"
 # default_border pixel 3
 default_border none
 # default_floating_border pixel 3
-# gaps inner 10
+gaps inner 10
 # titlebar_padding 1
 # titlebar_border_thickness 0
 # SCREEN-SETTINGS

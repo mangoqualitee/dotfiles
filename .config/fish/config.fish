@@ -35,7 +35,7 @@ if status --is-interactive
     # setenv HELIX_RUNTIME $HOME/dev/open-source/tools/helix/runtime
     setenv EDITOR /home/vishal/.local/bin/hx
     setenv DOTFILES /home/vishal/Documents/dotfiles
-    setenv BROWSER /usr/bin/vivaldi-stable
+    setenv BROWSER /usr/bin/firefox # vivaldi-stable
 
     function fish_user_key_bindings
         # fish_vi_key_bindings

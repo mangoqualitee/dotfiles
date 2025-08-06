@@ -1,0 +1,78 @@
+[colors]
+# Blue theme for Alacritty terminal
+# Based on Vim's blue colorscheme
+
+[colors.primary]
+background = "#000087"  # Dark blue background
+foreground = "#ffd700"  # Gold foreground
+
+[colors.cursor]
+text = "#000000"        # Black text on cursor
+cursor = "#00ff00"      # Bright green cursor
+
+[colors.vi_mode_cursor]
+text = "#000000"        # Black text
+cursor = "#ffd700"      # Gold cursor in vi mode
+
+[colors.selection]
+text = "#ffffff"        # White text in selection
+background = "#008787"  # Dark cyan selection background
+
+[colors.search]
+[colors.search.matches]
+foreground = "#000000"  # Black text
+background = "#ffd700"  # Gold background for matches
+
+[colors.search.focused_match]
+foreground = "#000000"  # Black text
+background = "#d787d7"  # Magenta background for focused match
+
+[colors.footer_bar]
+foreground = "#000087"  # Dark blue text
+background = "#5fffff"  # Cyan background
+
+[colors.hints]
+[colors.hints.start]
+foreground = "#000000"  # Black text
+background = "#ffd700"  # Gold background
+
+[colors.hints.end]
+foreground = "#000000"  # Black text
+background = "#008787"  # Dark cyan background
+
+[colors.line_indicator]
+foreground = "None"
+background = "None"
+
+# Normal colors
+[colors.normal]
+black = "#000000"
+red = "#cd0000"
+green = "#00cd00"
+yellow = "#cdcd00"
+blue = "#5fffff"  #"#0000ee"
+magenta = "#cd00cd"
+cyan = "#00cdcd"
+white = "#e5e5e5"
+
+# Bright colors
+[colors.bright]
+black = "#7f7f7f"
+red = "#ff0000"
+green = "#00ff00"
+yellow = "#ffff00"
+blue = "#5fffff" # "#5c5cff"
+magenta = "#ff00ff"
+cyan = "#00ffff"
+white = "#ffffff"
+
+# Dim colors (optional)
+[colors.dim]
+black = "#000000"
+red = "#870000"
+green = "#005f00"
+yellow = "#878700"
+blue = "#000087"
+magenta = "#870087"
+cyan = "#008787"
+white = "#bcbcbc"

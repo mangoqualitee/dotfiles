@@ -1,10 +1,10 @@
-general.import = [
-  # "./themes/base24-gruvbox-dark.toml",
-  "./themes/base16-gruber.toml",
+[general]
+import = [
+  "~/.config/alacritty/themes/mqual_blue.toml",
 ]
 
 [font]
-size = 14
+size = 18
 
 [font.normal]
 family = "Iosevka Nerd Font"
