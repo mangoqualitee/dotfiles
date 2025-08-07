@@ -1,10 +1,21 @@
 [icons]
 icons = "awesome4"
 
+# [[block]]
+# block = "custom"
+# command = '''swaymsg -t get_inputs | jq -r '.[1].xkb_active_layout_name' | sed -E 's/.*programmer Dvorak.*/dvorak-p/; s/.*Workman-P.*/workman-p/; s/.*English \(US\).*/qwerty/' '''
+# interval = 1
+
 [[block]]
-block = "custom"
-command = '''swaymsg -t get_inputs | jq -r '.[1].xkb_active_layout_name' | sed -E 's/.*programmer Dvorak.*/dvorak-p/; s/.*Workman-P.*/workman-p/; s/.*English \(US\).*/qwerty/' '''
-interval = 1
+block = "keyboard_layout"
+driver = "sway"
+format = " $layout "
+[block.mappings]
+"English (US)" = "qwerty"
+"English (Dvorak)" = "dvorak"
+"English (Workman)" = "EN"
+"German (neo2)" = "neo2"
+"Russian (N/A)" = "RU"
 
 [[block]]
 block = "music"

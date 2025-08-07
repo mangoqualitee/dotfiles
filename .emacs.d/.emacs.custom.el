@@ -4,9 +4,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes nil)
+ '(custom-enabled-themes '(mqual-blue))
  '(custom-safe-themes
-   '("296da7c17c698e963c79b985c6822db0b627f51474c161d82853d2cb1b90afb0"
+   '("4cc9792d6e9fb067124620e579d70e38090a46eea8586d871deafcc1db555450"
+     "296da7c17c698e963c79b985c6822db0b627f51474c161d82853d2cb1b90afb0"
      "6af2d8e45219854a7249fb6db7c69e78293f755c9b3db508d567d06c9a5ce3f2"
      "d34219ec49bcd68531dc890fd5c7ff1f189754e192164748444c73ba5d6689f2"
      "6d58981b6b03393aaecd39ac155550784386b8029b9a4cb9c846a0922dd1bdbc"

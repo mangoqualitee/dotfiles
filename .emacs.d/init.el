@@ -1,4 +1,6 @@
-(setq custom-file "~/.emacs.custom.el")
+(setq custom-file "~/.emacs.d/.emacs.custom.el")
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
 (setenv "LC_ALL" "C")
 (setq dired-listing-switches "-alh --group-directories-first")
@@ -8,17 +10,15 @@
 
 ;; org-mode stuff
 (setq org-log-done t)
-(setq org-agenda-files (list "~/Documents/Org/banana.org"
-			     "~/Documents/Org/gyan.org"
-			     "~/Documents/Org/mango.org"
-			     "~/Documents/Org/vishal.org"))
+(setq org-agenda-files (list "~/Dropbox/Org/todo.org"))
+
 ;; activation
 (global-set-key (kbd "C-c l") #'org-store-link)
 (global-set-key (kbd "C-c a") #'org-agenda)
 (global-set-key (kbd "C-c c") #'org-capture)
 
 
-(add-to-list 'load-path "~/.emacs.local/")
+(add-to-list 'load-path "~/.emacs.d/.local/")
 (require 'simpc-mode)
 (add-to-list 'auto-mode-alist '("\\.[hc]\\(pp\\)?\\'" . simpc-mode))
 

@@ -17,22 +17,12 @@ if status --is-interactive
     abbr -a y yazi
 
     # lang-toolchains
-    # set -gx PATH "$HOME/.miniconda/bin" $PATH
-    source "$HOME/.cargo/env.fish"
-    opam env | source
-    set -gx PATH "$HOME/.juliaup/bin" $PATH
+    #set -gx PATH "$HOME/.miniconda/bin" $PATH
+    #source "$HOME/.cargo/env.fish"
+    #opam env | source
+    #set -gx PATH "$HOME/.juliaup/bin" $PATH
     set -gx PATH "$HOME/.local/bin" $PATH
-    set -gx PATH "$HOME/node_modules/vscode-json-languageserver/bin" $PATH
 
-    # set -x CMAKE_C_COMPILER gcc
-    # set -x CMAKE_CXX_COMPILER g++
-    # set -x CMAKE_MAKE_PROGRAM (which ninja)
-
-    #set -gx PATH /opt/cuda/bin $PATH
-    #set -gx LD_LIBRARY_PATH /opt/cuda/lib64/ $LD_LIBRARY_PATH
-
-    # setenv LESSHISTFILE -
-    # setenv HELIX_RUNTIME $HOME/dev/open-source/tools/helix/runtime
     setenv EDITOR /home/vishal/.local/bin/hx
     setenv DOTFILES /home/vishal/Documents/dotfiles
     setenv BROWSER /usr/bin/firefox # vivaldi-stable
@@ -47,10 +37,6 @@ if status --is-interactive
         alias clear 'commandline ""'
     end
 
-    # source (/usr/bin/starship init fish --print-full-init | psub)
-    zoxide init fish | source
-    fzf --fish | source
-
     # Fish git prompt
     set __fish_git_prompt_showuntrackedfiles yes
     set __fish_git_prompt_showdirtystate yes
@@ -59,8 +45,5 @@ if status --is-interactive
     set -g fish_prompt_pwd_dir_length 1
 
     # theming
-    # source $HOME/dev/others/base16/templates/tinted-fzf/fish/base16-gruvbox-dark-hard.fish
-    # source $HOME/dev/others/base16/templates/base16-shell/profile_helper.fish
-    # base16-gruvbox-dark-hard
-
+    # source theme.fish
 end
